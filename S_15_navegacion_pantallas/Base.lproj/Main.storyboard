@@ -23,7 +23,8 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="45"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="btnPurple:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IzF-Wx-qDj"/>
+                                    <action selector="btnPurple:" destination="f63-6l-9YF" eventType="touchUpInside" id="ca7-rQ-QN3"/>
+                                    <action selector="showPurpleVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dJs-AK-Vg4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8s-fT-c1s">
@@ -33,7 +34,8 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="45"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="btnBlue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LCf-fD-a3D"/>
+                                    <action selector="btnBlue:" destination="f63-6l-9YF" eventType="touchUpInside" id="GmQ-AD-t1U"/>
+                                    <action selector="showBlueVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F4n-bF-Ngg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wE-BA-3ye">
@@ -43,7 +45,8 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="45"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="btnNegro:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UgY-oG-3je"/>
+                                    <action selector="btnNegro:" destination="f63-6l-9YF" eventType="touchUpInside" id="dhR-q7-xdw"/>
+                                    <action selector="showBlackVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Ij-Po-vmD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -64,62 +67,29 @@
                     </view>
                     <navigationItem key="navigationItem" title="Menú Yellow" id="cbc-6g-k7i"/>
                     <connections>
-                        <segue destination="J1K-oa-Qbp" kind="show" identifier="BlackVC" id="Z2u-Tk-OYb"/>
                         <segue destination="34u-ND-LBf" kind="show" identifier="PurpleVC" id="L09-Qp-gjy"/>
-                        <segue destination="Whb-Dh-jZG" kind="show" identifier="BlueVC" id="HZh-ct-3Xf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="f63-6l-9YF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="132" y="-27"/>
         </scene>
-        <!--Black View Controller-->
-        <scene sceneID="Zcu-IH-RxC">
-            <objects>
-                <viewController id="J1K-oa-Qbp" customClass="BlackViewController" customModule="S_15_navegacion_pantallas" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="q1p-qm-3bv">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="FfP-09-l8t"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Wus-oN-JD4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QI5-Dw-sOe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1030" y="-732"/>
-        </scene>
-        <!--Purple View Controller-->
+        <!--Color View Controller-->
         <scene sceneID="HOt-ae-uqI">
             <objects>
-                <viewController id="34u-ND-LBf" customClass="PurpleViewController" customModule="S_15_navegacion_pantallas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="34u-ND-LBf" customClass="ColorViewController" customModule="S_15_navegacion_pantallas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HdU-Ev-JZW">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="YQJ-1g-ghW"/>
-                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="BMg-1n-pbf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qIY-qG-gbH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1030" y="-27"/>
-        </scene>
-        <!--Blue View Controller-->
-        <scene sceneID="ff2-9H-gVG">
-            <objects>
-                <viewController id="Whb-Dh-jZG" customClass="BlueViewController" customModule="S_15_navegacion_pantallas" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CS1-9a-B04">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="VfN-6A-qk8"/>
-                        <color key="backgroundColor" systemColor="systemMintColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="gND-jo-qUo"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kLs-AS-AxY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1030" y="686"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6KA-xz-LWC">
@@ -139,11 +109,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

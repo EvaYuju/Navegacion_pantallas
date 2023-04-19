@@ -14,45 +14,37 @@ class ViewController: UIViewController {
 
     }
 
-    // Vinculamos el viewController con cada una de las pantallas
-    @IBAction func btnNegro(_ sender: Any) {
-        print("Soy el botón negro")
-        // Identificador a donde se va y el parametro sender el objeto que llama
-        performSegue(withIdentifier: "BlackVC", sender: self)
-    }
     
-    @IBAction func btnPurple(_ sender: Any) {
-        print("Soy el botón rosa")
-        performSegue(withIdentifier: "PurpleVC", sender: self)
+    
 
-    }
-    
-    @IBAction func btnBlue(_ sender: Any) {
-        print("Soy el botón azul")
-        performSegue(withIdentifier: "BlueVC", sender: self)
+    @IBAction func showBlackVC(_ sender: Any) {
+            let blackVC = ColorViewController()
+            blackVC.backgroundColor = .black
+            blackVC.title = "Black"
+            navigationController?.pushViewController(blackVC, animated: true)
+        }
 
-    }
-    // Sobreescribir la funcion segueways¿
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Acciones para identificador
-        if segue.identifier == "BlackVC" {
-            // Creamos un objeto
-            if let destino = segue.destination as? BlackViewController {
-                destino.title = "Negro"
-            }
-        
+        @IBAction func showPurpleVC(_ sender: Any) {
+            let purpleVC = ColorViewController()
+            purpleVC.backgroundColor = .purple
+            purpleVC.title = "Purple"
+            navigationController?.pushViewController(purpleVC, animated: true)
         }
-        if segue.identifier == "PurpleVC" {
-            if let destino = segue.destination as? PurpleViewController {
-                destino.title = "Purple"
-            }
-        }
-        if segue.identifier == "BlueVC" {
-            if let destino = segue.destination as? BlueViewController {
-                destino.title = "Blue"
-            }
+
+        @IBAction func showBlueVC(_ sender: Any) {
+            let blueVC = ColorViewController()
+            blueVC.backgroundColor = .blue
+            blueVC.title = "Blue"
+            navigationController?.pushViewController(blueVC, animated: true)
         }
     }
-    
-}
+
+func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ColorVC" {
+            if let color = sender as? UIColor, let destino = segue.destination as? ColorViewController {
+                destino.backgroundColor = color
+            }
+        }
+    }
+
 
